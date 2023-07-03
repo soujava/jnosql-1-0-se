@@ -7,7 +7,7 @@ import jakarta.nosql.Template;
 
 import java.util.Optional;
 
-public class App
+public class App2
 {
     public static void main( String[] args )
     {
@@ -15,10 +15,10 @@ public class App
             var faker = new Faker();
 
             Template template = container.select(Template.class).get();
-            var cat = Cat.create(faker);
-            template.insert(cat);
+            var dog = Dog.create(faker);
+            template.insert(dog);
 
-            Optional<Cat> optional = template.find(Cat.class, cat.id());
+            var optional = template.find(Dog.class, dog.id());
             System.out.println("The result: " + optional);
 
         }
