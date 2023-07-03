@@ -1,0 +1,3 @@
+= Eclipse JNoSQL 1.0.0 sample release
+
+This is a sample project running on Java SE, MongoDB, and Eclipse JNoSQL's new version: 1.0.0
