@@ -8,7 +8,7 @@ import jakarta.nosql.Id;
 import java.util.UUID;
 
 @Entity
-public record Cat(@Id String id, @Column String name, @Column String breed) implements Animal {
+public record Cat(@Id String id, @Column String name, @Column String breed) implements Pet {
 
     public static Cat create(Faker faker) {
         var cat = faker.cat();

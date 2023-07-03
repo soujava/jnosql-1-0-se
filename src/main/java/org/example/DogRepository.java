@@ -6,9 +6,9 @@ import jakarta.enterprise.event.Event;
 
 @Repository
 public interface DogRepository extends PageableRepository<Dog, String>,
-        AnimalQueries<Dog> {
+        PetQueries<Dog> {
 
-    default Dog register(Dog dog, Event<Animal> event) {
+    default Dog register(Dog dog, Event<Pet> event) {
         event.fire(dog);
         return this.save(dog);
     }

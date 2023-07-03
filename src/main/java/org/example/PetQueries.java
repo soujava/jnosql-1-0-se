@@ -2,7 +2,7 @@ package org.example;
 
 import java.util.List;
 
-public interface AnimalQueries<T extends Animal> {
+public interface PetQueries<T extends Pet> {
 
     List<T> findByName(String name);
 

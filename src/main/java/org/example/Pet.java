@@ -1,6 +1,6 @@
 package org.example;
 
-public interface Animal {
+public interface Pet {
 
     String name();
     String breed();

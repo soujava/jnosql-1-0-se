@@ -5,7 +5,6 @@ import jakarta.enterprise.event.Event;
 import jakarta.enterprise.inject.se.SeContainer;
 import jakarta.enterprise.inject.se.SeContainerInitializer;
 import jakarta.enterprise.util.TypeLiteral;
-import jakarta.nosql.Template;
 
 public class App3
 {
@@ -15,7 +14,7 @@ public class App3
             var faker = new Faker();
 
             DogRepository repository = container.select(DogRepository.class).get();
-            Event<Animal> event = container.select(new TypeLiteral<Event<Animal>>() {
+            Event<Pet> event = container.select(new TypeLiteral<Event<Pet>>() {
             }).get();
             var dog = Dog.create(faker);
             System.out.println("The register result: " +   repository.register(dog, event));
