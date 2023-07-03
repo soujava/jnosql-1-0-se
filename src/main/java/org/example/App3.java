@@ -15,7 +15,7 @@ public class App3
             var faker = new Faker();
 
             DogRepository repository = container.select(DogRepository.class).get();
-            Event<Dog> event = container.select(new TypeLiteral<Event<Dog>>() {
+            Event<Animal> event = container.select(new TypeLiteral<Event<Animal>>() {
             }).get();
             var dog = Dog.create(faker);
             System.out.println("The register result: " +   repository.register(dog, event));
